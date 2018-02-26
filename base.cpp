@@ -17,15 +17,22 @@ private:
     base pack[30];
     void mix();
     int mana;
+    int in_hand;
 public:
-    base hade[30];
+    base hnad[30];
     void start();
     ~desk();
+    void show_hand();
     void drop();
 };
+    void desk::show_hand()
+    {
+        for(auto i=0; i<this->in_hand;i++)
+            this->hnad[i].show();
+    }
    void base::show()
    {
-   std::cout<<cost<<std::endl<<name<<std::endl<<attack<<std::endl;
+   std::cout<<this->cost<<std::endl<<this->name<<std::endl<<this->attack<<std::endl;
    }
 
    base::base(unsigned short int cost, std::string name, unsigned short int attack)
