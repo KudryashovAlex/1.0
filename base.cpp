@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cstring>
+#include<fstream>
 class base
 {
 private:
@@ -8,7 +9,7 @@ private:
     unsigned short int attack;
 public:
     base(unsigned short int cost, std::string name, unsigned short int attack);
-    void show();
+    void show();//+
     base& operator =(const base& m);
 };
 class desk
@@ -18,11 +19,12 @@ private:
     void mix();
     int mana;
     int in_hand;
+    void desk_build();
 public:
     base hnad[30];
     void start();
     ~desk();
-    void show_hand();
+    void show_hand();//+
     void drop();
 };
     void desk::show_hand()
